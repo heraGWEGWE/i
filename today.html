@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Title</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-color: #9a8bef; 
+            color: #eee;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #555;
+        }
+        
+        h1 {
+            color: #fff;
+            margin-bottom: 10px;
+        }
+        
+        .container {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+        
+        .media-section {
+            background-color: #444;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+        
+        h2 {
+            color: #fff;
+            margin-bottom: 15px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid #666;
+        }
+        
+        .media-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+        }
+        
+        video {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+        }
+        
+        audio {
+            width: 100%;
+            margin-top: 10px;
+        }
+        
+        .link-section {
+            margin-top: 30px;
+            padding: 20px;
+            background-color: #444;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+        
+        .sites-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+        
+        .sites-table th {
+            background-color: #555;
+            color: #fff;
+            padding: 12px;
+            text-align: left;
+            border-bottom: 2px solid #666;
+        }
+        
+        .sites-table td {
+            padding: 12px;
+            border-bottom: 1px solid #666;
+        }
+        
+        .site-url {
+            color: #8cf;
+            word-break: break-all;
+            font-size: 0.95em;
+        }
+        
+        .site-button {
+            background-color: #5a7;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background-color 0.3s;
+            white-space: nowrap;
+        }
+        
+        .site-button:hover {
+            background-color: #6b8;
+        }
+        
+        .sites-table tr:hover {
+            background-color: rgba(255, 255, 255, 0.05);
+        }
+        
+        .warning-note {
+            background-color: #553;
+            padding: 10px;
+            border-radius: 5px;
+            margin-top: 15px;
+            font-size: 0.9em;
+            border-left: 4px solid #cc5;
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #555;
+            color: #aaa;
+            font-size: 0.9em;
+        }
+        
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+            
+            .media-section {
+                padding: 15px;
+            }
+            
+            .sites-table {
+                display: block;
+                overflow-x: auto;
+            }
+            
+            .site-url {
+                font-size: 0.85em;
+            }
+            
+            .site-button {
+                padding: 6px 12px;
+                font-size: 0.9em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>САЙТ</h1>
+        <p>сайт</p>
+    </header>
+    
+    <div class="container">
+        <section class="media-section">
+            <h2>Картинка</h2>
+            <div class="media-container">
+                <img src="image 27.png" alt="Пример изображения">
+            </div>
+            <p>картинка</p>
+        </section>
+        
+        <section class="media-section">
+            <h2>Видос</h2>
+            <div class="media-container">
+                <video controls>
+                    <source src="уркц.mp4" type="video/mp4">
+                </video>
+            </div>
+            <p>видео</p>
+        </section>
+        
+        <section class="media-section">
+            <h2>аудио</h2>
+            <audio controls>
+                <source src="houston-we-have-a-problem.mp3" type="audio/mpeg">
+            </audio>
+            <p>скелетонс</p>
+        </section>
+        
+        <section class="link-section">
+            <h2>топ фильмы</h2>
+            <p>ТОП фильмы века</p>
+            
+            <table class="sites-table">
+                <thead>
+                    <tr>
+                        <th>фильмы</th>
+                        <th>ссылка</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="site-url">интерстеллар</td>
+                        <td><button class="site-button" onclick="window.open('https://www.kinopoisk.ru/film/258687/', '_blank')">кинопоиск</button></td>
+                    </tr>
+                    <tr>
+                        <td class="site-url">1+!</td>
+                        <td><button class="site-button" onclick="window.open('https://www.kinopoisk.ru/film/535341/', '_blank')">кинопоиск</button></td>
+                    </tr>
+                    <tr>
+                        <td class="site-url">джентельмены</td>
+                        <td><button class="site-button" onclick="window.open('https://www.kinopoisk.ru/film/1143242/', '_blank')">кинопоиск</button></td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <div class="warning-note">
+                <strong>ps: </strong>фильмы с топ 250 фильмов кинопоиск
+            </div>
+        </section>
+    </div>
+    
+    <footer>
+    </footer>
+</body>
+</html>
